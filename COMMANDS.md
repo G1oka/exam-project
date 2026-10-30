@@ -24,6 +24,18 @@ git merge nav-feature
 git merge nav-alt
 git add index.html
 git commit -m "Resolve merge conflict between nav-feature and nav-alt"
+git remote add origin https://github.com/G1oka/exam-project.git
+git push --all -u origin
 ```
 
-GitHub repository creation, remote configuration, push, and pull are pending GitHub sign-in.
+Collaboration pull demonstration, using a second clone:
+
+```sh
+git clone /Users/giorgi/Documents/gadabareba/exam/exam-project /tmp/exam-project-collab
+git remote set-url origin https://github.com/G1oka/exam-project.git
+git add README.md COMMANDS.md
+git commit -m "Document remote collaboration update"
+git push origin main
+# In the original checkout:
+git pull origin main
+```
